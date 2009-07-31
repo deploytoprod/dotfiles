@@ -1,0 +1,2 @@
+# rails specific irbrc
+require 'factory_girl'

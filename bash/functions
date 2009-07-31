@@ -1,0 +1,20 @@
+#functions
+
+# For running specific features.
+function rff {
+ rake features FEATURE=features/"$1".feature
+}
+
+# For running specific line numbers
+function rffl {
+ cucumber features/"$1".feature:"$2"
+}
+
+# changing directory to code project
+function c { cd ~/code/$1; }
+
+# chaning directory from ~
+function h { cd ~/$1/; }
+
+# misc
+alias reload='. ~/.bash_profile'

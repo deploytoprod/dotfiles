@@ -1,0 +1,11 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[user]
+	email = crayment16@gmail.com
+	name = Cody Rayment
+[merge]
+	tool = opendiff
+[core]
+	editor = mate -wl1

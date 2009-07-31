@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+class HomeCompletion
+  def initialize(command)
+    @command = command
+  end
+  
+  def matches
+    home.select do |task|
+      task[0, typed.length] == typed
+    end
+  end
+  
+  def typed
+    @command[/\s(.+?)$/, 1] || ''
+  end
+  
+  def home
+    `ls ~/`.split
+  end
+end
+
+puts HomeCompletion.new(ENV["COMP_LINE"]).matches
+exit 0
