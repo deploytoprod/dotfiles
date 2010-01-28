@@ -11,7 +11,7 @@ function rffl {
 }
 
 # changing directory to code project
-function c { cd ~/code/$1; }
+function c { cd ~/dev/$1; }
 
 # chaning directory from ~
 function h { cd ~/$1/; }
