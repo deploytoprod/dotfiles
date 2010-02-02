@@ -11,6 +11,7 @@ alias mkdir="mkdir -p -v"
 alias back="cd $OLDPWD"
 alias ..='cd ..;' # can then do .. .. ..
 alias cd..="cd .."
+alias home='cd ~'
 #
 alias ping="ping -c 5"
 #
