@@ -34,3 +34,5 @@ if [ ${UID} -eq 0 ]; then
 else
     export PS1="\[${red}\]\u\[${yellow}\]@\[${green}\]\h\[${yellow}\]:\[${blue}\]\w\[${yellow}\]\$\[${default}\]"
 fi
+
+export RAILS_ENV=development
