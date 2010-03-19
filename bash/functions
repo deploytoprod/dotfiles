@@ -13,8 +13,19 @@ function rffl {
 # changing directory to code project
 function c { cd ~/dev/$1; }
 
-# chaning directory from ~
+# changing directory to rails code
+function r { cd ~/dev/rails/$1; }
+
+# changing directory from ~
 function h { cd ~/$1/; }
+
+# rails templates from rbates
+function railsapp-rb {
+  template=$1
+  appname=$2
+  shift 2
+  rails $appname -m http://github.com/ryanb/rails-templates/raw/master/$template.rb $@
+}
 
 # misc
 alias reload='. ~/.bash_profile'
