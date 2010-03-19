@@ -8,7 +8,7 @@ alias ll="ls -l"
 alias lal="ls -al"
 #
 alias mkdir="mkdir -p -v"
-alias back="cd $OLDPWD"
+alias back="cd -"
 alias ..='cd ..;' # can then do .. .. ..
 alias cd..="cd .."
 alias home='cd ~'
