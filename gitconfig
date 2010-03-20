@@ -9,3 +9,12 @@
 	tool = opendiff
 [core]
 	editor = mate -wl1
+[alias]
+	s = status
+	c = commit
+	ca = commit -a
+	co = checkout
+	p = push
+	pl = pull
+	d = diff
+	b = branch

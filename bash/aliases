@@ -15,7 +15,7 @@ alias home='cd ~'
 #
 alias ping="ping -c 5"
 #
-alias g='grep -i'  # case insensitive grep
+alias gr='grep -i'  # case insensitive grep
 #
 alias hist='history|g'
 alias psgrep='ps aux|g'
@@ -23,6 +23,7 @@ alias psgrep='ps aux|g'
 alias top='top -o cpu'
 
 # git
+alias g='git'
 alias gl='git pull'
 alias gp='git push'
 alias gd='git diff'
