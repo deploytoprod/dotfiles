@@ -1,0 +1,12 @@
+db/*.sqlite3
+log/*.log
+tmp
+tmp/**/*
+doc/api
+doc/app
+config/database.yml
+*~
+*.cache
+*.log
+*.pid
+.DS_Store
