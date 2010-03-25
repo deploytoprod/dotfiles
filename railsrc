@@ -1,2 +1,5 @@
 # rails specific irbrc
 require 'factory_girl'
+
+require 'hirb'
+Hirb.enable
