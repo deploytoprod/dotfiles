@@ -1,3 +1,6 @@
+# Run the following to install required gems
+# gem install map_by_method what_methods wirble sketches
+
 # Make gems available
 require 'rubygems'
  

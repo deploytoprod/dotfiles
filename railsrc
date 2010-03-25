@@ -1,4 +1,11 @@
-# rails specific irbrc
+# ========================
+# = rails specific irbrc =
+# ========================
+
+# Run the following to install required gems
+# gem install factory_girl hirb
+
+
 require 'factory_girl'
 
 require 'hirb'
