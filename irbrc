@@ -13,6 +13,9 @@ require 'what_methods'
  
 # Pretty Print method
 require 'pp'
+
+# Awesome print methodo
+require "ap"
  
 # Load the readline module.
 IRB.conf[:USE_READLINE] = true
