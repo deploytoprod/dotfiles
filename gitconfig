@@ -18,3 +18,4 @@
 	pl = pull
 	d = diff
 	b = branch
+	f = fetch
