@@ -6,7 +6,7 @@
 	email = crayment16@gmail.com
 	name = Cody Rayment
 [merge]
-	tool = opendiff
+	tool = kdiff3
 [core]
 	editor = mate -wl1
 [alias]
