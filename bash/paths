@@ -1,2 +1,4 @@
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$PATH:/usr/local/mysql/bin"
+export PATH="$PATH:/Applications/Doxygen.app/Contents/Resources"
+export PATH="$PATH:/usr/bin/android_sdk/tools"
