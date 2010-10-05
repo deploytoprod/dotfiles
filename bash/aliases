@@ -45,5 +45,9 @@ alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 
+# work
+alias stu='cd ~/dev/classroom_response/classroom_response_student'
+alias tea='cd ~/dev/classroom_response/classroom_response_teacher'
+
 # what should you be aliasing
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"

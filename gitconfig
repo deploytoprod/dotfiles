@@ -19,3 +19,5 @@
 	d = diff
 	b = branch
 	f = fetch
+[push]
+	default = tracking
