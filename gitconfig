@@ -1,23 +1,24 @@
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
 [user]
 	email = crayment16@gmail.com
 	name = Cody Rayment
 [merge]
-	tool = kdiff3
+  tool = kdiff3
 [core]
-	editor = mate -wl1
+  editor = mate -wl1
+  excludesfile = /Users/crayment/.gitignore_global
 [alias]
-	s = status
-	c = commit
-	ca = commit -a
-	co = checkout
-	p = push
-	pl = pull
-	d = diff
-	b = branch
-	f = fetch
+  s = status
+  c = commit
+  ca = commit -a
+  co = checkout
+  p = push
+  pl = pull
+  d = diff
+  b = branch
+  f = fetch
 [push]
-	default = tracking
+  default = tracking

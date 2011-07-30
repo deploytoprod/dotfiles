@@ -1,22 +1,36 @@
-# Run the following to install required gems
-# gem install map_by_method what_methods wirble sketches awesome_print
+# Setup
+# $rvm gemset use global
+# $gem install awesome_print hirb wirble
 
-# Make gems available
-require 'rubygems'
- 
-# http://drnicutilities.rubyforge.org/map_by_method/
-require 'map_by_method'
- 
-# Dr Nic's gem inspired by
-# http://redhanded.hobix.com/inspect/stickItInYourIrbrcMethodfinder.html
-require 'what_methods'
- 
-# Pretty Print method
-require 'pp'
+# Add all gems in the global gemset to the $LOAD_PATH so they can be used even
+# in places like 'rails console'.
+if defined?(::Bundler)
+  global_gemset = ENV['GEM_PATH'].split(':').grep(/ruby.*@global/).first
+  if global_gemset
+    all_global_gem_paths = Dir.glob("#{global_gemset}/gems/*")
+    all_global_gem_paths.each do |p|
+      gem_path = "#{p}/lib"
+      $LOAD_PATH << gem_path
+    end
+  end
+end
 
-# Awesome print methodo
+# Wirble is a set of enhancements for irb
+# http://pablotron.org/software/wirble/README
+# Implies require 'pp', 'irb/completion', and 'rubygems'
+require 'wirble'
+Wirble.init
+ 
+# Enable colored output
+Wirble.colorize
+
+# Awesome print method
 require "ap"
- 
+
+# Fancy printing for models
+require 'hirb'
+Hirb.enable
+
 # Load the readline module.
 IRB.conf[:USE_READLINE] = true
  
@@ -33,24 +47,15 @@ IRB.conf[:AUTO_INDENT]=true
 require 'irb/ext/save-history'
 IRB.conf[:SAVE_HISTORY] = 100
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
- 
-# Wirble is a set of enhancements for irb
-# http://pablotron.org/software/wirble/README
-# Implies require 'pp', 'irb/completion', and 'rubygems'
-require 'wirble'
-Wirble.init
- 
-# Enable colored output
-Wirble.colorize
- 
+
 # Clear the screen
 def clear
-system 'clear'
-if ENV['RAILS_ENV']
-return "Rails environment: " + ENV['RAILS_ENV']
-else
-return "No rails environment - happy hacking!";
-end
+  system 'clear'
+  if ENV['RAILS_ENV']
+    return "Rails environment: " + ENV['RAILS_ENV']
+  else
+    return "No rails environment - happy hacking!";
+  end
 end
  
 # Shortcuts
@@ -114,22 +119,17 @@ class Object
     max_name = data.collect {|item| item[0].size}.max
     max_args = data.collect {|item| item[1].size}.max
     data.each do |item|
-      print " #{ANSI_BOLD}#{item[0].rjust(max_name)}#{ANSI_RESET}"
-      print "#{ANSI_GRAY}#{item[1].ljust(max_args)}#{ANSI_RESET}"
+      print " #{ANSI_BOLD}#{item[0].to_s.rjust(max_name)}#{ANSI_RESET}"
+      print "#{ANSI_GRAY}#{item[1].to_s.ljust(max_args)}#{ANSI_RESET}"
       print " #{ANSI_LGRAY}#{item[2]}#{ANSI_RESET}\n"
     end
     data.size
   end
-end
- 
-# http://sketches.rubyforge.org/
-require 'sketches'
-Sketches.config :editor => 'mate -wl1'
-
-class Object
+  
   def local_methods
     (methods - Object.instance_methods).sort
   end
+  
 end
 
 def copy(str)
@@ -144,14 +144,8 @@ def ep
   eval(paste)
 end
 
-# load rails stuff?
-# load (File.dirname(__FILE__) + '/.railsrc') if $0 == 'irb' && ENV['RAILS_ENV']
-
-script_console_running = ENV.include?('RAILS_ENV') && IRB.conf[:LOAD_MODULES] && IRB.conf[:LOAD_MODULES].include?('console_with_helpers')
-rails_running = ENV.include?('RAILS_ENV') && !(IRB.conf[:LOAD_MODULES] && IRB.conf[:LOAD_MODULES].include?('console_with_helpers'))
-irb_standalone_running = !script_console_running && !rails_running
-
-if script_console_running
-  require 'logger'
-  Object.const_set(:RAILS_DEFAULT_LOGGER, Logger.new(STDOUT))
+# Rails logger
+if defined?(Rails) && !Rails.env.nil? && Rails.logger
+  Rails.logger = Logger.new(STDOUT)
+  ActiveRecord::Base.logger = Rails.logger
 end

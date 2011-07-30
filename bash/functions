@@ -1,32 +1,5 @@
 #functions
 
-# For running specific features.
-function rff {
- rake features FEATURE=features/"$1".feature
-}
-
-# For running specific line numbers
-function rffl {
- cucumber features/"$1".feature:"$2"
-}
-
-# changing directory to code project
-function c { cd ~/dev/$1; }
-
-# changing directory to rails code
-function r { cd ~/dev/rails/$1; }
-
-# changing directory from ~
-function h { cd ~/$1/; }
-
-# rails templates from rbates
-function railsapp-rb {
-  template=$1
-  appname=$2
-  shift 2
-  rails $appname -m http://github.com/ryanb/rails-templates/raw/master/$template.rb $@
-}
-
 # Open man pages with textmate
 tman () {
   MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
