@@ -30,7 +30,7 @@ shopt -s histverify # verify a substituted history expansion
 shopt -s histreedit # re-edit a failed history substitution
 
 # prompt
-export PS1="\[${red}\]\u\[${yellow}\]@\[${green}\]\h\[${yellow}\]:\[${blue}\]\w\[${CYAN}\]\$(__git_ps1 '(%s)')\[${yellow}\]\$\[${default}\]"
+export PS1="\[${red}\]\u\[${yellow}\]@\[${green}\]\h\[${yellow}\]:\[${blue}\]\w\[${CYAN}\]\$(__git_ps1 '(%s)')\[${yellow}\]\$\[${white}\]"
 
 export RAILS_ENV=development
 
