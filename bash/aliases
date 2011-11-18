@@ -33,7 +33,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias gf='git fetch'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias grm="git status | grep deleted | awk '{ print \"\x27\" substr(\$0,length(\$1 \$2)+6) \"\x27\" }' | xargs git rm"
 alias gdw='git --no-pager diff --word-diff'
 
 # rails
