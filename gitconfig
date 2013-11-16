@@ -3,13 +3,13 @@
   status = auto
   branch = auto
 [user]
-	email = crayment16@gmail.com
-	name = Cody Rayment
+	email = dev@rafalop.es
+	name = Rafael Lopes
 [merge]
   tool = kdiff3
 [core]
   editor = mate -wl1
-  excludesfile = /Users/crayment/.gitignore_global
+  excludesfile = /Users/rafael/.gitignore_global
 [alias]
   s = status
   c = commit
