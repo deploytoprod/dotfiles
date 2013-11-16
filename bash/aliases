@@ -3,6 +3,7 @@
 alias cl="clear"
 alias e="exit"
 #
+alias ls="ls -a"
 alias la="ls -a"
 alias ll="ls -l"
 alias lal="ls -al"
