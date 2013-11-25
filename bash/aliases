@@ -14,8 +14,6 @@ alias ..='cd ..;' # can then do .. .. ..
 alias cd..="cd .."
 alias home='cd ~'
 #
-alias ping="ping -c 5"
-#
 alias gr='grep -i'  # case insensitive grep
 #
 alias hist='history|g'
