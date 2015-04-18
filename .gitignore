@@ -2,3 +2,5 @@
 .svn
 *~
 ssh
+aws
+.aws
