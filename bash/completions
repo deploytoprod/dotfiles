@@ -1,5 +1,0 @@
-# source/complete completion scripts
-source ~/.bash/completion_scripts/git-completion.bash
-source ~/.bash/completion_scripts/git-flow-completion
-complete -C ~/.bash/completion_scripts/rake_completion -o default rake
-complete -C ~/.bash/completion_scripts/capistrano_completion -o default cap
