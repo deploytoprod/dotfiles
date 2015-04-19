@@ -45,7 +45,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws zsh-syntax-highlighting wd sublime)
+plugins=(git aws zsh-syntax-highlighting wd sublime tmux brew)
 
 # User configuration
 
@@ -80,6 +80,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pg="ping 8.8.8.8"
 alias banner="figlet"
+alias tmux="t"
 
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
