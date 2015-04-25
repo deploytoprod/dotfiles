@@ -80,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pg="ping 8.8.8.8"
 alias banner="figlet"
-alias tmux="t"
+alias t="tmux"
+alias cow="cowthink"
 
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-
