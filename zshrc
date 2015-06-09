@@ -82,5 +82,10 @@ alias pg="ping 8.8.8.8"
 alias banner="figlet"
 alias t="tmux"
 alias cow="cowthink"
+alias watch="watch -n 1"
+alias j="jekyll"
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
