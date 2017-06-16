@@ -5,7 +5,7 @@ export ZSH=/Users/`whoami`/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerline"
+ZSH_THEME="cloud"
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(return battery ram)
 #POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 #POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
@@ -73,11 +73,11 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws zsh-syntax-highlighting wd sublime tmux brew wp)
+plugins=(aws git zsh-syntax-highlighting wd sublime tmux brew wp)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/freitasr/.local"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/freitasr/.local:/Users/freitasr/.gem/ruby/2.0.0/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -115,11 +115,13 @@ alias lookbusy="cat /dev/urandom | hexdump -C | grep \"34 32\""
 alias c="clear"
 alias conn="ssh pi@int.raspi.rafalop.es"
 alias boeing="chmod"
-alias weather="curl -4 http://wttr.in/NewYork"
+alias weather='curl -s http://wttr.in/$(curl -s http://ipinfo.io/city)\?1m |head -17'
 alias t="todo.sh"
 alias todo="todo.sh"
 alias tls="todo.sh ls"
 alias tlsp="todo.sh lsp"
+alias moo="cow"
+alias focker="docker"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8

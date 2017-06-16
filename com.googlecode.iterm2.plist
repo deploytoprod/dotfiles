@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AboutToPasteTabsWithCancel</key>
+	<true/>
+	<key>AboutToPasteTabsWithCancel_selection</key>
+	<integer>2</integer>
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
 	<key>AllowClipboardAccess</key>
@@ -28,8 +32,8 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>/Users/freitasr/itermprint.py /Users/freitasr/Dev/training-tools/fio/comnovos.txt</string>
 		<string>/Users/freitasr/itermreprint.py /Users/freitasr/Dev/training-tools/fio/comnovos.txt</string>
+		<string>/Users/freitasr/itermprint.py /Users/freitasr/Dev/training-tools/fio/comnovos.txt</string>
 		<string>/Users/freitasr/itermreprint.py /Users/freitasr/Dev/training-tools/fio/completo.txt</string>
 		<string>/Users/freitasr/itermprint.py /Users/freitasr/Dev/training-tools/fio/completo.txt</string>
 	</array>
@@ -608,6 +612,8 @@
 	<integer>32</integer>
 	<key>HotkeyCode</key>
 	<integer>49</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>524288</integer>
 	<key>IRMemory</key>
@@ -647,7 +653,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -663,15 +669,21 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>249 119 880 134 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>178 305 606 456 0 0 1280 777 </string>
+	<string>178 276 924 485 0 0 1280 800 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>520 579 400 129 0 0 1440 900 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>330 289 620 392 0 0 1280 777 </string>
+	<string>370 209 700 622 0 0 1440 900 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>1280 382 606 469 1280 256 1024 768 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>298 220 918 495 0 0 1280 777 </string>
+	<string>299 221 918 512 0 0 1440 900 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>80 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 133 1274 643 0 0 1280 777 </string>
+	<string>0 17 1440 883 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 4 970 452 0 0 1280 777 </string>
+	<string>0 24 1440 876 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_60061000-B28D-4605-A1A7-04FCCB7A3D08</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_92F0EFD1-0C1B-4E6A-BDEF-939EBAD90D9F</key>
@@ -872,7 +884,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>120</integer>
+			<integer>130</integer>
 			<key>Command</key>
 			<string>/bin/zsh</string>
 			<key>Cursor Color</key>
@@ -1383,7 +1395,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.12437823414802551</real>
+			<real>0.0</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -2150,7 +2162,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477783987.55665302</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>488378336.94738102</real>
+	<real>502004875.10180002</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -2165,6 +2177,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>2</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2219,7 +2233,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-08-06T01:26:17Z</date>
+	<date>2017-06-07T19:02:35Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -2249,6 +2263,8 @@
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1476457856</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
@@ -2269,9 +2285,11 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.5</string>
+	<string>3.1.beta.4</string>
 </dict>
 </plist>
