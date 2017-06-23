@@ -32,8 +32,8 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>/Users/freitasr/itermreprint.py /Users/freitasr/Dev/training-tools/fio/comnovos.txt</string>
 		<string>/Users/freitasr/itermprint.py /Users/freitasr/Dev/training-tools/fio/comnovos.txt</string>
+		<string>/Users/freitasr/itermreprint.py /Users/freitasr/Dev/training-tools/fio/comnovos.txt</string>
 		<string>/Users/freitasr/itermreprint.py /Users/freitasr/Dev/training-tools/fio/completo.txt</string>
 		<string>/Users/freitasr/itermprint.py /Users/freitasr/Dev/training-tools/fio/completo.txt</string>
 	</array>
@@ -631,7 +631,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~</string>
+	<string>~/OneDrive/Training/Dev/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -653,7 +653,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>307</string>
+		<string>322</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -667,7 +667,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>833 82 231 329 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>249 119 880 134 0 0 1440 877 </string>
+	<string>700 225 573 292 0 0 1280 800 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>178 276 924 485 0 0 1280 800 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
@@ -677,13 +677,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>1280 382 606 469 1280 256 1024 768 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>299 221 918 512 0 0 1440 900 </string>
+	<string>269 391 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 17 1440 883 0 0 1440 900 </string>
+	<string>0 4 1440 896 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 24 1440 876 0 0 1440 900 </string>
+	<string>114 -42 1648 752 0 0 1280 800 </string>
 	<key>NeverWarnAboutShortLivedSessions_60061000-B28D-4605-A1A7-04FCCB7A3D08</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_92F0EFD1-0C1B-4E6A-BDEF-939EBAD90D9F</key>
@@ -773,12 +773,16 @@
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.32096061110496521</real>
+				<real>0.48235412314534187</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.79335421323776245</real>
+				<real>0.834716796875</real>
 				<key>Red Component</key>
-				<real>0.4164578914642334</real>
+				<real>0.55286378101348654</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -887,6 +891,8 @@
 			<integer>130</integer>
 			<key>Command</key>
 			<string>/bin/zsh</string>
+			<key>Cursor Boost</key>
+			<real>0.0</real>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1239,11 +1245,13 @@
 			<key>Name</key>
 			<string>Lindão</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodePro+Powerline+AwesomeRegular 12</string>
+			<string>SauceCodePowerline-Medium 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
+			<key>Non-ASCII Ligatures</key>
+			<true/>
 			<key>Normal Font</key>
-			<string>SourceCodePro+Powerline+AwesomeRegular 13</string>
+			<string>SauceCodePowerline-Medium 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1394,10 +1402,14 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
+			<key>Thin Strokes</key>
+			<integer>1</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
 			<array/>
+			<key>Unicode Version</key>
+			<integer>8</integer>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -2145,6 +2157,10 @@
 	</array>
 	<key>NoSyncConfirmBeta</key>
 	<true/>
+	<key>NoSyncCoprocessCommandsToIgnoreErrorOutput</key>
+	<array>
+		<string>/Users/freitasr/itermprint.py /Users/freitasr/Dev/training-tools/fio/comnovos.txt</string>
+	</array>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
@@ -2213,7 +2229,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/freitasr/WorkDocs/Dev/dotfiles</string>
+	<string>/Users/freitasr/OneDrive/Training/Dev/dotfiles</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -2233,7 +2249,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-07T19:02:35Z</date>
+	<date>2017-06-21T22:34:59Z</date>
+	<key>SUSkippedVersion</key>
+	<string>3.1.beta.5</string>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -2245,11 +2263,15 @@
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.22060546278953552</real>
+	<real>0.15339793073825347</real>
+	<key>StretchTabsToFillBar</key>
+	<true/>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
+	<key>TabStyle</key>
+	<integer>2</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
@@ -2291,5 +2313,9 @@
 	<false/>
 	<key>iTerm Version</key>
 	<string>3.1.beta.4</string>
+	<key>kCPKSelectionViewPreferredModeKey</key>
+	<integer>0</integer>
+	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
+	<false/>
 </dict>
 </plist>
