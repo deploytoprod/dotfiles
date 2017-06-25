@@ -1,5 +1,7 @@
 # About
 
+This is in alpha. Test on your own. Don't dare using this if you don't use <code>zsh</code>.
+
 # Install
 
 The easy way is running <code>./install.sh</code>, found in this directory. The DIY mode is:
