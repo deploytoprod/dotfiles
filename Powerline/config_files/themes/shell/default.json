@@ -9,10 +9,6 @@
 				"priority": 10
 			},
 			{
-				"function": "powerline.segments.common.env.user",
-				"priority": 30
-			},
-			{
 				"function": "powerline.segments.common.env.virtualenv",
 				"priority": 50
 			},
@@ -26,13 +22,13 @@
 			}
 		],
 		"right": [
+{
+    "function": "powerline_gitstatus.gitstatus",
+    "priority": 40
+},
 			{
 				"function": "powerline.segments.shell.last_pipe_status",
 				"priority": 10
-			},
-			{
-				"function": "powerline.segments.common.vcs.branch",
-				"priority": 40
 			}
 		]
 	}
