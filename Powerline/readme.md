@@ -15,7 +15,9 @@ You don't need to configure nothing manually if you have used the install.sh, bu
 
 When you install Powerline, don't forget to call it on ~/.zshrc by invoking <code>source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh #Powerline here we go!</code>
 
-Once you install <code>powerline-gitstatus</code>, the files will be copied to <code>/usr/local/lib/python2.7/site-packages</code> and that's it, pip will just copy a bunch of files. Now to configure, you have to edit the themes and colorschemas, the <powerline-gitstatus</code> page asks you to edit these files, but Powerline creates multiple files (it's kinda chaotic) and the thing is *which* file to change. In my laptop I could put things to work by editing the files inside the "shell" folder, precisely these ones:  
+Once you install <code>powerline-gitstatus</code>, the files will be copied to <code>/usr/local/lib/python2.7/site-packages</code> and that's it, pip will just copy a bunch of files. Now to configure, you have to edit the themes and colorschemas, the <code>powerline-gitstatus</code> page asks you to edit these files, but Powerline creates multiple files (it's kinda chaotic) and the thing is *which* file to change. In my laptop I could put things to work by editing the files inside different folders, precisely these ones:  
 
 - <code>/usr/local/lib/python2.7/site-packages/powerline/config_files/themes/shell/default.json</code>
 - <code>/usr/local/lib/python2.7/site-packages/powerline/config_files/colorschemes/default.json</code>
+
+Notice that one file is inside the "shell" subfolder and the other isn't.
