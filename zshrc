@@ -122,8 +122,11 @@ alias tls="todo.sh ls"
 alias tlsp="todo.sh lsp"
 alias moo="cow"
 alias focker="docker"
+alias cal="cal -y"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh #Powerline here we go!
 weather
+
