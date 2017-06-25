@@ -673,11 +673,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 364 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>371 175 796 473 0 0 1440 877 </string>
+	<string>334 255 796 473 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 7 1435 867 0 0 1440 877 </string>
+	<string>50 170 1095 537 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>176 190 920 327 0 0 1440 877 </string>
+	<string>50 149 1095 558 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>197 47 920 327 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_60061000-B28D-4605-A1A7-04FCCB7A3D08</key>
@@ -769,23 +769,19 @@
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
-				<key>Alpha Component</key>
-				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.48235412314534187</real>
-				<key>Color Space</key>
-				<string>sRGB</string>
+				<real>0.0</real>
 				<key>Green Component</key>
-				<real>0.834716796875</real>
+				<real>0.79335423519736847</real>
 				<key>Red Component</key>
-				<real>0.55286378101348654</real>
+				<real>0.0</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
 				<key>Blue Component</key>
 				<real>0.023484811186790466</real>
 				<key>Green Component</key>
-				<real>0.77873152494430542</real>
+				<real>0.77873149671052633</real>
 				<key>Red Component</key>
 				<real>0.82177734375</real>
 			</dict>
@@ -794,9 +790,9 @@
 				<key>Blue Component</key>
 				<real>0.78231418132781982</real>
 				<key>Green Component</key>
-				<real>0.22315913438796997</real>
+				<real>0.46265947818756104</real>
 				<key>Red Component</key>
-				<real>0.39303034543991089</real>
+				<real>0.12754884362220764</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
@@ -810,20 +806,20 @@
 			<key>Ansi 6 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.42708510160446167</real>
+				<real>0.4270850873863633</real>
 				<key>Green Component</key>
-				<real>0.59426397085189819</real>
+				<real>0.59426396099817613</real>
 				<key>Red Component</key>
-				<real>0.64004451036453247</real>
+				<real>0.64004451685977415</real>
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.36043858528137207</real>
+				<real>0.93415912828947367</real>
 				<key>Green Component</key>
-				<real>0.93415910005569458</real>
+				<real>0.89001238346099854</real>
 				<key>Red Component</key>
-				<real>0.86746257543563843</real>
+				<real>0.91611063480377197</real>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
@@ -852,7 +848,7 @@
 				<key>Blue Component</key>
 				<real>0.15170273184776306</real>
 				<key>Green Component</key>
-				<real>0.12512849271297455</real>
+				<real>0.12512849506578946</real>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
@@ -860,6 +856,19 @@
 			<false/>
 			<key>Background Image Location</key>
 			<string></string>
+			<key>Badge Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>0.5</real>
+				<key>Blue Component</key>
+				<real>0.0</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
+				<key>Green Component</key>
+				<real>0.0</real>
+				<key>Red Component</key>
+				<real>1</real>
+			</dict>
 			<key>Blend</key>
 			<real>0.30000001192092896</real>
 			<key>Blink Allowed</key>
@@ -898,6 +907,19 @@
 				<key>Red Component</key>
 				<real>0.44058024883270264</real>
 			</dict>
+			<key>Cursor Guide Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>0.25</real>
+				<key>Blue Component</key>
+				<real>1</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
+				<key>Green Component</key>
+				<real>0.91000000000000003</real>
+				<key>Red Component</key>
+				<real>0.65000000000000002</real>
+			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -926,11 +948,11 @@
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.84038859605789185</real>
+				<real>0.81360507011413574</real>
 				<key>Green Component</key>
-				<real>0.86788332462310791</real>
+				<real>0.81360507011413574</real>
 				<key>Red Component</key>
-				<real>0.87809765338897705</real>
+				<real>0.78374281682466207</real>
 			</dict>
 			<key>Guid</key>
 			<string>92F0EFD1-0C1B-4E6A-BDEF-939EBAD90D9F</string>
@@ -1232,6 +1254,19 @@
 					<string>[1;5F</string>
 				</dict>
 			</dict>
+			<key>Link Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.67800000000000005</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
+				<key>Green Component</key>
+				<real>0.27000000000000002</real>
+				<key>Red Component</key>
+				<real>0.023</real>
+			</dict>
 			<key>Log Directory</key>
 			<string></string>
 			<key>Minimum Contrast</key>
@@ -1266,21 +1301,29 @@
 			<true/>
 			<key>Selected Text Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.025619931519031525</real>
+				<real>0.076554089784622192</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.13423712551593781</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.14382101595401764</real>
+				<real>0.0</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.098937921226024628</real>
+				<real>0.040415748953819275</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.90834379196166992</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.92617583274841309</real>
+				<real>0.95579791069030762</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
@@ -2159,6 +2202,8 @@
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>519912911.54923201</real>
 	<key>OnlyWhenMoreTabs</key>
@@ -2231,7 +2276,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-23T12:25:33Z</date>
+	<date>2017-06-25T10:33:12Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUSkippedVersion</key>
@@ -2296,7 +2341,7 @@
 	<key>iTerm Version</key>
 	<string>3.0.15</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 </dict>
