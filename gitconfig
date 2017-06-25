@@ -8,7 +8,7 @@
 [merge]
   tool = kdiff3
 [core]
-  editor = mate -wl1
+  editor = vim
   excludesfile = /Users/rafael/.gitignore_global
 [alias]
   s = status

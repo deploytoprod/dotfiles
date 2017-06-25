@@ -77,7 +77,7 @@ plugins=(aws git zsh-syntax-highlighting wd sublime tmux brew wp)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/freitasr/.local:/Users/freitasr/.gem/ruby/2.0.0/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/`whoami`/.local:/Users/`whoami`/.gem/ruby/2.0.0/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
