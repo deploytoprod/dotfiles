@@ -1,0 +1,30 @@
+#!/bin/sh
+awsprofile="bobeirasa"
+bucket=$(basename "$PWD")
+
+function green_message() {
+  echo "\033[32m$1\033[0m"
+}
+function red_message() {
+  echo "\033[31m$1\033[0m"
+}
+function exit_on_error() {
+  red_message "$1"
+  exit 1
+}
+
+green_message "[INFO] - Started execution at `date`"
+cmd="aws cloudfront list-distributions --query 'DistributionList.Items[].{Id:Id,Aliases:Aliases.Items}' --profile $awsprofile |jq ' map(select(.Aliases[] | contains (\"$bucket\"))) | .[] .Id' | head -1"
+#echo $cmd
+eval $cmd > /tmp/did
+tr -d '\n' < /tmp/did >> /dev/null
+did=$(cat /tmp/did |cut -d '"' -f 2)
+rm -fR /tmp/did
+
+green_message "[INFO] - Deploying $bucket"
+cd _site/
+green_message "[INFO] - Synchronizing _site/ folder to s3://$bucket with deletion to clean local deleted files"
+aws s3 sync . s3://$bucket --profile $awsprofile --exclude \'s3_website.yml\' --delete || exit_on_error "[ERROR] - Failed on S3 sync, aborting."
+green_message "[INFO] - Invalidating all CloudFront objects for distribution $did (ALIAS: $bucket)"
+aws cloudfront --profile $awsprofile create-invalidation --distribution-id $did --paths '/*' '/*/*' '/index.html'  || exit_on_error "[ERROR] - Failed on CloudFront invalidation, aborting."
+green_message "[INFO] - Finished execution at `date`"
