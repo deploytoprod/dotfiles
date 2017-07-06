@@ -32,8 +32,8 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>/Users/freitasr/itermprint.py /Users/freitasr/Dev/training-tools/fio/comnovos.txt</string>
 		<string>/Users/freitasr/itermreprint.py /Users/freitasr/Dev/training-tools/fio/comnovos.txt</string>
+		<string>/Users/freitasr/itermprint.py /Users/freitasr/Dev/training-tools/fio/comnovos.txt</string>
 		<string>/Users/freitasr/itermreprint.py /Users/freitasr/Dev/training-tools/fio/completo.txt</string>
 		<string>/Users/freitasr/itermprint.py /Users/freitasr/Dev/training-tools/fio/completo.txt</string>
 	</array>
@@ -673,9 +673,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 364 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>334 255 796 473 0 0 1280 777 </string>
+	<string>599 384 918 498 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>50 170 1095 537 0 0 1280 777 </string>
+	<string>962 5 955 1051 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>50 149 1095 558 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -845,12 +845,16 @@
 			<true/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15170273184776306</real>
+				<real>0.084016814827919006</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.12512849506578946</real>
+				<real>0.052953153848648071</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.016067283228039742</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -870,7 +874,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.30000001192092896</real>
+			<real>0.050000000000000003</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
@@ -878,7 +882,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>5.9599180221557617</real>
+			<real>5.6246995192307683</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -910,15 +914,15 @@
 			<key>Cursor Guide Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<real>0.25</real>
+				<real>0.0771026611328125</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.32584273815155029</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.91000000000000003</real>
+				<real>0.32583719491958618</real>
 				<key>Red Component</key>
-				<real>0.65000000000000002</real>
+				<real>0.32584697008132935</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -932,7 +936,7 @@
 			<key>Cursor Type</key>
 			<integer>1</integer>
 			<key>Custom Command</key>
-			<string>Yes</string>
+			<string>No</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -959,7 +963,7 @@
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
-			<real>1</real>
+			<real>0.99659379706325291</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -1283,6 +1287,10 @@
 			<true/>
 			<key>Normal Font</key>
 			<string>SourceCodePro-Regular 12</string>
+			<key>Only The Default BG Color Uses Transparency</key>
+			<false/>
+			<key>Open Toolbelt</key>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1444,7 +1452,7 @@
 			<key>Thin Strokes</key>
 			<integer>1</integer>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.046368805473372778</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unicode Version</key>
@@ -1457,8 +1465,14 @@
 			<false/>
 			<key>Use Canonical Parser</key>
 			<false/>
+			<key>Use Cursor Guide</key>
+			<true/>
+			<key>Use HFS Plus Mapping</key>
+			<false/>
 			<key>Use Italic Font</key>
 			<true/>
+			<key>Use Tab Color</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1.0429375961602454</real>
 			<key>Visual Bell</key>
@@ -2276,7 +2290,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-25T10:33:12Z</date>
+	<date>2017-06-30T02:55:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUSkippedVersion</key>
@@ -2341,7 +2355,7 @@
 	<key>iTerm Version</key>
 	<string>3.0.15</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>5</integer>
+	<integer>7</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 </dict>
