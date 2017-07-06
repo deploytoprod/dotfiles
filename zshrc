@@ -1,3 +1,6 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/`whoami`/.oh-my-zsh
 
@@ -16,24 +19,6 @@ ZSH_THEME="cloud"
 #POWERLEVEL9K_NVM_BACKGROUND='28'
 #POWERLEVEL9K_NVM_FOREGROUND='15'
 #POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uE868  %d.%m}"
-
-#Custom powerline
-POWERLINE_RIGHT_A="exit-status-on-fail"
-POWERLINE_RIGHT_B="none"
-POWERLINE_HIDE_HOST_NAME="true"
-POWERLINE_PATH="short"
-POWERLINE_NO_BLANK_LINE="true"
-POWERLINE_DETECT_SSH="true"
-
-#Git
-POWERLINE_GIT_CLEAN="✔"
-POWERLINE_GIT_DIRTY="✘"
-POWERLINE_GIT_ADDED="%F{green}✚%F{black}"
-POWERLINE_GIT_MODIFIED="%F{blue}✹%F{black}"
-POWERLINE_GIT_DELETED="%F{red}✖%F{black}"
-POWERLINE_GIT_UNTRACKED="%F{yellow}✭%F{black}"
-POWERLINE_GIT_RENAMED="➜"
-POWERLINE_GIT_UNMERGED="═"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -73,7 +58,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws git zsh-syntax-highlighting wd sublime tmux brew wp)
+plugins=(aws git zsh-syntax-highlighting wd sublime brew wp)
 
 # User configuration
 
@@ -120,13 +105,11 @@ alias t="todo.sh"
 alias todo="todo.sh"
 alias tls="todo.sh ls"
 alias tlsp="todo.sh lsp"
+alias tbu="echo 'Tasks assigned by Buni:' && todo.sh |grep Buni"
 alias moo="cow"
 alias focker="docker"
 alias cal="cal -y"
 
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh #Powerline here we go!
 weather
-
+tbu
