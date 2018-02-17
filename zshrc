@@ -8,7 +8,7 @@ export ZSH=/Users/`whoami`/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="cloud"
+ZSH_THEME="agnoster"
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(return battery ram)
 #POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 #POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
@@ -109,7 +109,15 @@ alias tbu="echo 'Tasks assigned by Buni:' && todo.sh |grep Buni"
 alias moo="cow"
 alias focker="docker"
 alias cal="cal -y"
+alias chmodql="chmod 400 ~/Downloads/qwik*"
 
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh #Powerline here we go!
 weather
 tbu
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
