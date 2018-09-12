@@ -62,7 +62,7 @@ plugins=(aws git zsh-syntax-highlighting wd sublime brew wp)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/`whoami`/.local:/Users/`whoami`/.gem/ruby/2.0.0/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/`whoami`/.local:/Users/`whoami`/.gem/ruby/2.0.0/bin:/Users/`whoami`/.mos/bin:/Users/`whoami`/Library/Python/2.7/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -110,6 +110,9 @@ alias moo="cow"
 alias focker="docker"
 alias cal="cal -y"
 alias chmodql="chmod 400 ~/Downloads/qwik*"
+alias jsonfix="pbpaste | jq . | pbcopy"
+alias getstudents="aws dynamodb scan --table-name students-registration --query 'Items[*].Text' --output text"
+alias clonesdcard="sudo dd if=/dev/disk2 |pv -s 2G | dd of=~/Desktop/raspi.img bs=4096"
 
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh #Powerline here we go!
 weather
