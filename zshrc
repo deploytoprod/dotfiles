@@ -112,15 +112,9 @@ alias cal="cal -y"
 alias chmodql="chmod 400 ~/Downloads/qwik*"
 alias jsonfix="pbpaste | jq . | pbcopy"
 alias getstudents="aws dynamodb scan --table-name students-registration --query 'Items[*].Text' --output text"
-alias clonesdcard="sudo dd if=/dev/disk2 |pv -s 2G | dd of=~/Desktop/raspi.img bs=4096"
+alias python='python3'
 
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh #Powerline here we go!
-weather
-tbu
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+source /Users/freitasr/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+#source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh #Powerline here we go!
+#weather
+t

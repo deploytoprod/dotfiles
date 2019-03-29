@@ -6,10 +6,10 @@
 	email = dev@rafalop.es
 	name = Rafael Lopes
 [merge]
-  tool = kdiff3
+	tool = Kaleidoscope
 [core]
   editor = vim
-  excludesfile = /Users/rafael/.gitignore_global
+  excludesfile = /Users/freitasr/.gitignore_global
 [alias]
   s = status
   c = commit
@@ -29,3 +29,14 @@
 [credential]
   helper = !aws --profile CodeCommitProfile codecommit credential-helper $@
   UseHttpPath = true
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
