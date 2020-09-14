@@ -1,0 +1,117 @@
+-- Mute Chime, Globally!
+-- @author: Michael Moussa <mrmoussa@>
+
+-- INSTRUCTIONS:
+
+-- Mute Chime.app
+--
+--   1. Open "Automator"
+--   2. File -> New -> Application
+--   3. Locate and double-click the "Run AppleScript" action
+--   4. Replace the contents of the text editor that opens with the contents of this file you're reading right now.
+--   5. Export it to "/Applications" and call it "Mute Chime.app"
+
+-- Mute Chime.workflow
+--
+--   1. Open "Automator" (if you closed it already for some reason 🤷‍♂️)
+--   2. File -> New -> Quick Action
+--   3. Set "Workflow receives" to "no input" in "any application"
+--   4. Locate and double-click the "Launch Application" action
+--   5. Choose the "Mute Chime.app" application that you exported in the earlier section.
+--   6. Export it to "~/Library/Services/" and call it "Mute Chime.workflow"
+
+-- Keyboard Shortcut
+--
+--   1. Open the "Keyboard" pane within System Preferences
+--   2. Click Shortcuts
+--   3. Click Services
+--   4. Scroll all the way down and find "Launch Mute Chime" under "General"
+--   5. Check the box to turn it on, then add whichever hotkey you like (I used SHIFT+CMD+Y).
+--   6. Open the "Security and Privacy" pane within System Preferences and select "Accessibility"
+--   7. Click the "+" button and add "Mute Chime.app" from "/Applications" (if it's not already there).
+--   8. Ensure the box next to "Mute Chime.app" is checked.
+--       * NOTE: You will may need to repeat steps 7 and 8 any time you make changes to the "Mute Chime.app"
+--               code (i.e. "install" a new version). You should first REMOVE "Mute Chime.app" from the list
+--               by clicking the "-" button, then re-add it.
+--   9. Open Chime, start an instant meeting, then minimize the window.
+--  10. Use your hotkey combination.
+--  11. Accept when it says that "Mute Chime.app" wants access to control "System Events.app".
+
+-- How does this work?
+--
+-- We can't use a simple Quick Action alone because macOS will want us to individually approve every application
+-- that we might ever be executing this hotkey from. We can, however, use the hotkey to simply launch another
+-- application, which we'd only have to approve once. So, we just have that application we launch be the application
+-- that runs the AppleScript that will mute Chime for us. Since all of that will now always be happening from the
+-- same application context (i.e. "Mute Chime.app"), we only need to approve it once. This does create a bit of a lag
+-- between when the hotkey is invoked and the mute is toggled, but has the advantage of being able to do it without
+-- having to bring Chime back into focus.
+
+
+on run {input, parameters}
+    -- Set this to false if you trust Chime to let you know that you're muted or not.
+    set DISPLAY_CONFIRMATION to true
+    -- Set this to false if you don't want to be notified if you accidentally triggered this while not in a meeting.
+    set WARN_IF_SUCCESSFUL_RUN_BUT_NO_MUTE to true
+
+    -- Customize your error / warning messages, if you'd like.
+    set DIDNT_MUTE to "WARNING: The \"Mute Chime\" action ran successfully, but no Mute button was found. Did you not have a meeting open?"
+    set CRITICAL_ERROR to "Sorry, something broke while trying to mute or unmute you. 🙁
+
+Check to make sure you've followed all of the instructions in the documentation at the top of the source file.
+
+If everything looks OK, please feel free to contact \"mrmoussa@\" for help!"
+
+    -- You should not have to modify any of the following if your Chime UI is in English and hasn't changed since this was last tested.
+    set CHIME_PROCESS_NAME to "Amazon Chime"
+    set WINDOW_MENU_NAME to "Window"
+    set MUTE_BUTTON_TEXT to "Mute"
+    set MUTED_NOTIFICATION to "You are muted"
+    set UNMUTED_NOTIFICATION to "YOU ARE NOT MUTED"
+    set UNMUTE_HELP_TEXT to "Unmute my microphone"
+
+    -- The next two "set" statements are only there because I don't know of any way in AppleScript
+    -- to simply grab an element using a proper identifier, and this approach is better than
+    -- looking for it programmatically every time.
+    -- The values below should function unless there's a major change to the UI.
+    set MUTE_BUTTON_TOOLBAR to 1
+    set MUTE_BUTTON_GROUP to 2
+
+    tell application "System Events"
+        if exists process CHIME_PROCESS_NAME then
+            tell process CHIME_PROCESS_NAME
+                try
+                    set muteStatus to false
+
+                    -- Gets all the names of everything under the WINDOW_MENU_NAME menu, one of which is the active
+                    -- meeting that we want to mute (usually the last one)
+                    set menuItemTitles to title of menu item of menu WINDOW_MENU_NAME of menu bar item WINDOW_MENU_NAME of menu bar 1
+                    repeat with menuItemTitle in reverse of menuItemTitles
+                        set muteButton to (a reference to (button MUTE_BUTTON_TEXT of group MUTE_BUTTON_GROUP of toolbar MUTE_BUTTON_TOOLBAR of window menuItemTitle))
+                        if exists muteButton then
+                            click muteButton
+                            set muteStatus to help of muteButton
+                            if DISPLAY_CONFIRMATION then
+                                if muteStatus contains UNMUTE_HELP_TEXT then
+                                    display notification MUTED_NOTIFICATION with title CHIME_PROCESS_NAME
+                                else
+                                    display notification UNMUTED_NOTIFICATION with title CHIME_PROCESS_NAME
+                                end if
+                            end if
+                            exit repeat
+                        end if
+                    end repeat
+
+                    if muteStatus is false and WARN_IF_SUCCESSFUL_RUN_BUT_NO_MUTE then
+                        display notification DIDNT_MUTE with title CHIME_PROCESS_NAME
+                    end if
+                on error
+                    beep
+                    display alert CRITICAL_ERROR as critical
+                end try
+            end tell
+        end if
+    end tell
+
+    return input
+end run
