@@ -113,8 +113,14 @@ alias chmodql="chmod 400 ~/Downloads/qwik*"
 alias jsonfix="pbpaste | jq . | pbcopy"
 alias getstudents="aws dynamodb scan --table-name students-registration --query 'Items[*].Text' --output text"
 alias python='python3'
+alias k='kubectl'
+alias e='eksctl'
+alias removemouseacceleration='defaults write .GlobalPreferences com.apple.mouse.scaling -1'
 
 source /Users/freitasr/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 #source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh #Powerline here we go!
 #weather
-t
+removemouseacceleration
+#export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH=$HOME/.gem/ruby/2.5.0/bin:$PATH
+export PATH="/usr/local/opt/ruby@2.5/bin:$PATH"

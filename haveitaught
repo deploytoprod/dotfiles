@@ -1,0 +1,3 @@
+#!/bin/bash
+echo Looking for $1 in the sessions
+grep -nr "$1" ~/Drive/Training/_session
