@@ -3,7 +3,7 @@
   status = auto
   branch = auto
 [user]
-	email = dev@rafalop.es
+	email = rafael@rafalopes.com.br
 	name = Rafael Lopes
 [merge]
 	tool = Kaleidoscope
@@ -26,6 +26,7 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+	process = git-lfs filter-process
 [credential]
   helper = !aws --profile CodeCommitProfile codecommit credential-helper $@
   UseHttpPath = true

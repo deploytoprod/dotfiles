@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -8,7 +15,7 @@ export ZSH=/Users/`whoami`/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(return battery ram)
 #POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 #POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
@@ -58,7 +65,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws git zsh-syntax-highlighting wd sublime brew wp)
+plugins=(aws git zsh-syntax-highlighting wd sublime brew)
 
 # User configuration
 
@@ -95,7 +102,8 @@ alias pg="ping 8.8.8.8"
 alias banner="figlet"
 alias cow="cowthink"
 alias watch="watch -n 1"
-alias j="jekyll"
+alias js="bundle exec jekyll serve"
+alias jb="bundle exec jekyll build"
 alias lookbusy="cat /dev/urandom | hexdump -C | grep \"34 32\""
 alias c="clear"
 alias conn="ssh pi@int.raspi.rafalop.es"
@@ -116,11 +124,18 @@ alias python='python3'
 alias k='kubectl'
 alias e='eksctl'
 alias removemouseacceleration='defaults write .GlobalPreferences com.apple.mouse.scaling -1'
+alias midirelay='/Users/freitasr/Dev/midi-relay2.2.0-macos-x64/midi-relay-macos'
 
-source /Users/freitasr/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+#source /Users/freitasr/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 #source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh #Powerline here we go!
 #weather
 removemouseacceleration
 #export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH=$HOME/.gem/ruby/2.5.0/bin:$PATH
 export PATH="/usr/local/opt/ruby@2.5/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+source /usr/local/opt/chruby/share/chruby/chruby.sh
