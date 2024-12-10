@@ -1,5 +1,4 @@
 #!/bin/sh
-awsprofile="bobeirasa"
 bucket=$(basename "$PWD")
 
 function green_message() {
