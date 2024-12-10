@@ -2,14 +2,11 @@
   diff = auto
   status = auto
   branch = auto
-[user]
-	email = rafael@rafalopes.com.br
-	name = Rafael Lopes
+
 [merge]
 	tool = Kaleidoscope
 [core]
   editor = vim
-  excludesfile = /Users/freitasr/.gitignore_global
 [alias]
   s = status
   c = commit
